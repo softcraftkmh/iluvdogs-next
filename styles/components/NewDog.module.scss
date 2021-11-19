@@ -1,5 +1,9 @@
 .input {
 	display: grid;
 	grid-template-columns: 160px 1fr;
-	margin-bottom: 16px;
+	margin-top: 16px;
+}
+
+.error {
+	color: red;
 }

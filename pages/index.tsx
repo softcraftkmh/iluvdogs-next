@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import { useState } from "react";
 
 import Dog from "../components/Dog";
 import NewDog from "../components/NewDog";
@@ -7,7 +8,7 @@ import type { Dog as DogType } from "../models/dog";
 
 import styles from "../styles/pages/index.module.scss";
 
-const dogs: DogType[] = [
+const DOGS: DogType[] = [
 	{
 		name: "Golden Retriever",
 		pictureURL:
@@ -31,6 +32,12 @@ const dogs: DogType[] = [
 ];
 
 const Home: NextPage = () => {
+	const [dogs, setDogs] = useState(DOGS);
+
+	const onSubmit = (dog: DogType) => {
+		setDogs([...dogs, dog]);
+	};
+
 	return (
 		<>
 			<h1 className={styles.title}>I Luv Dogs</h1>
@@ -42,7 +49,7 @@ const Home: NextPage = () => {
 						);
 					})}
 				</div>
-				<NewDog />
+				<NewDog onSubmit={onSubmit} />
 			</div>
 		</>
 	);
