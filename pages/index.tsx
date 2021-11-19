@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 
 import Dog from "../components/Dog";
+import NewDog from "../components/NewDog";
 
 import type { Dog as DogType } from "../models/dog";
 
@@ -31,23 +32,20 @@ const dogs: DogType[] = [
 
 const Home: NextPage = () => {
 	return (
-		<div className={styles.container}>
+		<>
 			<h1 className={styles.title}>I Luv Dogs</h1>
-			<div className={styles.dogs}>
-				{dogs.map((dog, index) => {
-					return (
-						<Dog key={index} name={dog.name} pictureURL={dog.pictureURL} />
-					);
-				})}
+			<div className={styles.container}>
+				<div className={styles.dogs}>
+					{dogs.map((dog, index) => {
+						return (
+							<Dog key={index} name={dog.name} pictureURL={dog.pictureURL} />
+						);
+					})}
+				</div>
+				<NewDog />
 			</div>
-		</div>
+		</>
 	);
 };
-
-// const raw = [1, 2, 3];
-
-// const addOne = (value: number) => 1 + value;
-
-// const output = raw.map((val) => addOne(val)); // [2, 3, 4]
 
 export default Home;
