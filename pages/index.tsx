@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
+import ReactGA from "react-ga";
 
 import Dog from "../components/Dog";
 import NewDog from "../components/NewDog";
@@ -40,6 +41,16 @@ const Home: NextPage = () => {
 
 	return (
 		<>
+			<button
+				onClick={() => {
+					ReactGA.ga("event", "conversion", {
+						send_to: "AW-10822090853/lOLDCP-l7ogDEOWAsKgo",
+						event_callback: () => console.log("callback"),
+					});
+				}}
+			>
+				track
+			</button>
 			<h1 className={styles.title}>I Luv Dogs</h1>
 			<div className={styles.container}>
 				<div className={styles.dogs}>
