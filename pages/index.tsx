@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 import Dog from "../components/Dog";
 import NewDog from "../components/NewDog";

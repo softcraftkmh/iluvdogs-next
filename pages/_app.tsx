@@ -2,7 +2,7 @@ import "../styles/globals.css";
 
 import Head from "next/head";
 import { useEffect } from "react";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 
 import type { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {
