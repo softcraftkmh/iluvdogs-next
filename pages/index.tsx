@@ -45,7 +45,6 @@ const Home: NextPage = () => {
 				onClick={() => {
 					ReactGA.ga("event", "conversion", {
 						send_to: "AW-10822090853/lOLDCP-l7ogDEOWAsKgo",
-						event_callback: () => console.log("callback"),
 					});
 				}}
 			>

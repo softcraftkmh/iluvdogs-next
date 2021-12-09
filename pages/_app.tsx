@@ -8,7 +8,6 @@ import type { AppProps } from "next/app";
 function MyApp({ Component, pageProps }: AppProps) {
 	useEffect(() => {
 		ReactGA.initialize("UA-167495277-3");
-		console.log("send");
 		ReactGA.send(window.location.pathname + window.location.search);
 	}, []);
 
