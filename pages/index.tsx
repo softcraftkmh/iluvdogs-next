@@ -43,7 +43,7 @@ const Home: NextPage = () => {
 		<>
 			<button
 				onClick={() => {
-					ReactGA.ga("event", "conversion", {
+					ReactGA.event("conversion", {
 						send_to: "AW-10822090853/lOLDCP-l7ogDEOWAsKgo",
 					});
 				}}
